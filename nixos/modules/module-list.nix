@@ -60,7 +60,7 @@
   ./hardware/cpu/x86-msr.nix
   ./hardware/decklink.nix
   ./hardware/device-tree.nix
-  ./hardware/digitalbitbox.nix
+  ./hardware/bitbox.nix
   ./hardware/flipperzero.nix
   ./hardware/flirc.nix
   ./hardware/gkraken.nix
@@ -170,7 +170,7 @@
   ./programs/criu.nix
   ./programs/darling.nix
   ./programs/dconf.nix
-  ./programs/digitalbitbox/default.nix
+  ./programs/bitbox/default.nix
   ./programs/direnv.nix
   ./programs/dmrconfig.nix
   ./programs/droidcam.nix

@@ -3,20 +3,20 @@
 with lib;
 
 let
-  cfg = config.programs.digitalbitbox;
+  cfg = config.programs.bitbox;
 in
 
 {
-  options.programs.digitalbitbox = {
+  options.programs.bitbox = {
     enable = mkOption {
       type = types.bool;
       default = false;
       description = ''
-        Installs the Digital Bitbox application and enables the complementary hardware module.
+        Installs the Bitbox application and enables the complementary hardware module.
       '';
     };
 
-    package = mkPackageOption pkgs "digitalbitbox" {
+    package = mkPackageOption pkgs "bitbox" {
       extraDescription = ''
         This can be used to install a package with udev rules that differ from the defaults.
       '';
@@ -25,7 +25,7 @@ in
 
   config = mkIf cfg.enable {
     environment.systemPackages = [ cfg.package ];
-    hardware.digitalbitbox = {
+    hardware.bitbox = {
       enable = true;
       package = cfg.package;
     };
@@ -33,6 +33,6 @@ in
 
   meta = {
     doc = ./default.md;
-    maintainers = with lib.maintainers; [ vidbina ];
+    maintainers = with lib.maintainers; [ jensbin vidbina ];
   };
 }

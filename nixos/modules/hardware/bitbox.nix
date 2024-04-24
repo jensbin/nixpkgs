@@ -3,20 +3,20 @@
 with lib;
 
 let
-  cfg = config.hardware.digitalbitbox;
+  cfg = config.hardware.bitbox;
 in
 
 {
-  options.hardware.digitalbitbox = {
+  options.hardware.bitbox = {
     enable = mkOption {
       type = types.bool;
       default = false;
       description = ''
-        Enables udev rules for Digital Bitbox devices.
+        Enables udev rules for Bitbox devices.
       '';
     };
 
-    package = mkPackageOption pkgs "digitalbitbox" {
+    package = mkPackageOption pkgs "bitbox" {
       extraDescription = ''
         This can be used to install a package with udev rules that differ from the defaults.
       '';

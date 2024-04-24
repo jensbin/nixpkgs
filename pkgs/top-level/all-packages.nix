@@ -865,9 +865,8 @@ with pkgs;
 
   archiver = callPackage ../applications/misc/archiver { };
 
-  digitalbitbox = libsForQt5.callPackage ../applications/misc/digitalbitbox {
-    autoreconfHook = buildPackages.autoreconfHook269;
-  };
+  digitalbitbox = throw "digitalbitbox was removed because it is superseeded by bitbox.";
+  bitbox = callPackage ../pkgs/by-name/bi/bitbox { };
 
   gretl = callPackage ../applications/science/math/gretl {
     inherit (darwin.apple_sdk.frameworks) Accelerate;
